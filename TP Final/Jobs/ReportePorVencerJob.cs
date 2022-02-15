@@ -13,6 +13,9 @@ namespace TP_Final.Jobs
     {
         public Task Execute(IJobExecutionContext context)
         {
+            //Hacer que los prestamos se escriban en un txt
+
+
             //using (IUnitOfWork bUoW = new UnitOfWork(new AccountManagerDbContext()))
             //{
             //    List<EjemplarDTO> listaDTO = new List<EjemplarDTO>();
