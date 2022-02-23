@@ -23,6 +23,7 @@ namespace TP_Final_UI
         [STAThread]
         static void Main()
         {
+
             log.Info("----------App Iniciada----------");
             Task.Run(() => InitialzeScheduler());
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
