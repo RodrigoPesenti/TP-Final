@@ -40,8 +40,11 @@ namespace TP_Final_UI
             this.buttonAgregarEjemplar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonMostrarEjemplares = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.botonAdevolveren7dias = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listaLibros)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listaLibros
@@ -159,11 +162,32 @@ namespace TP_Final_UI
             this.buttonMostrarEjemplares.UseVisualStyleBackColor = true;
             this.buttonMostrarEjemplares.Click += new System.EventHandler(this.buttonMostrarEjemplares_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.botonAdevolveren7dias);
+            this.groupBox2.Location = new System.Drawing.Point(365, 444);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(177, 100);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Reportes";
+            // 
+            // botonAdevolveren7dias
+            // 
+            this.botonAdevolveren7dias.Location = new System.Drawing.Point(27, 37);
+            this.botonAdevolveren7dias.Name = "botonAdevolveren7dias";
+            this.botonAdevolveren7dias.Size = new System.Drawing.Size(125, 37);
+            this.botonAdevolveren7dias.TabIndex = 6;
+            this.botonAdevolveren7dias.Text = "A devolver en 7 dias";
+            this.botonAdevolveren7dias.UseVisualStyleBackColor = true;
+            this.botonAdevolveren7dias.Click += new System.EventHandler(this.botonAdevolveren7dias_Click);
+            // 
             // PantallaListaLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 559);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkedListBoxFiltro);
             this.Controls.Add(this.textBoxFiltro);
@@ -176,6 +200,7 @@ namespace TP_Final_UI
             this.VisibleChanged += new System.EventHandler(this.PantallaListaLibros_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.listaLibros)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +219,7 @@ namespace TP_Final_UI
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaCantEjemplares;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button botonAdevolveren7dias;
     }
 }

@@ -142,5 +142,12 @@ namespace TP_Final_UI
             buttonAgregarEjemplar.Enabled = true;
             buttonMostrarEjemplares.Enabled = true;
         }
+
+        private void botonAdevolveren7dias_Click(object sender, EventArgs e)
+        {
+            PantallaReporte pantallaReporte = new PantallaReporte(this);
+            this.Visible = false;
+            pantallaReporte.Show();
+        }
     }
 }

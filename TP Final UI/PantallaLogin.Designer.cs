@@ -83,7 +83,7 @@ namespace TP_Final_UI
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.BotonAceptar);
             this.Name = "PantallaLogin";
-            this.Text = "Form1";
+            this.Text = "Prestam O.S";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
