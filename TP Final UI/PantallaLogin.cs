@@ -1,12 +1,5 @@
 ﻿using log4net;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Final;
 
@@ -45,17 +38,17 @@ namespace TP_Final_UI
                         }
 
                     }
-                }            
+                }
             }
             catch (NullReferenceException exc)
             {
                 MessageBox.Show(exc.Message);
-                log.Error("El usuario " + textBoxUsuario.Text + " no existe en la base de datos",exc);
-            } 
+                log.Error("El usuario " + textBoxUsuario.Text + " no existe en la base de datos", exc);
+            }
             catch (ContraseñaIncorrectaException exc)
             {
                 MessageBox.Show(exc.Message);
-                log.Error("No se logro la autentificacion del usuario",exc);
+                log.Error("No se logro la autentificacion del usuario", exc);
             }
         }
     }

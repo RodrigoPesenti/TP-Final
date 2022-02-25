@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TP_Final.DAL;
 
 namespace EJ_2.DAL.EntityFramework
@@ -23,7 +20,7 @@ namespace EJ_2.DAL.EntityFramework
 
             iDbContext = pContext;
         }
-       
+
         public void Add(TEntity pEntity)
         {
             if (pEntity == null)

@@ -1,6 +1,6 @@
-﻿using TP_Final.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TP_Final.Domain;
 
 namespace TP_Final.DAL.EntityFramework.Mapping
 {
@@ -21,7 +21,7 @@ namespace TP_Final.DAL.EntityFramework.Mapping
 
             builder.Property(pCliente => pCliente.TipoNotificacion);
 
-            builder.Property(pClient => pClient.ID).ValueGeneratedOnAdd();           
+            builder.Property(pClient => pClient.ID).ValueGeneratedOnAdd();
 
             builder.Property(pClient => pClient.Contraseña)
                 .HasMaxLength(1000)

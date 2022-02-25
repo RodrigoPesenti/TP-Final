@@ -2,8 +2,6 @@ using log4net;
 using Quartz;
 using Quartz.Impl;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Final.Jobs;
@@ -12,7 +10,7 @@ using TP_Final.Jobs;
 
 namespace TP_Final_UI
 {
-    
+
     static class Program
     {
         //El log se guarda en C:\Logs\MyLogFile.txt
@@ -67,8 +65,8 @@ namespace TP_Final_UI
                     .RepeatForever())
             .Build();
 
-            //await scheduler.ScheduleJob(reportePorVencerJob, CadaDiaTrigger1);
-            //await scheduler.ScheduleJob(notificacionJob, CadaDiaTrigger2);
+            await scheduler.ScheduleJob(reportePorVencerJob, CadaDiaTrigger1);
+            await scheduler.ScheduleJob(notificacionJob, CadaDiaTrigger2);
         }
     }
 }

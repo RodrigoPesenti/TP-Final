@@ -1,12 +1,12 @@
-﻿using TP_Final.Domain;
-using TP_Final.DAL.EntityFramework;
-using TP_Final.DAL;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using TP_Final.DAL;
+using TP_Final.DAL.EntityFramework;
+using TP_Final.Domain;
 
 namespace EJ_2.DAL.EntityFramework
 {
-    public class UsuarioRepository : Repository<Usuario, AccountManagerDbContext>, IUsuarioRepository 
+    public class UsuarioRepository : Repository<Usuario, AccountManagerDbContext>, IUsuarioRepository
     {
         private readonly DbContext iDbContext;
 
@@ -19,5 +19,5 @@ namespace EJ_2.DAL.EntityFramework
         {
             return this.iDbContext.Set<Usuario>().FirstOrDefault(usuario => usuario.Nombre == pNombreUsuario);
         }
-    }   
+    }
 }

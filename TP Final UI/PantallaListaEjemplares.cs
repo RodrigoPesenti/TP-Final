@@ -1,13 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 using TP_Final;
 using TP_Final.Excepciones;
@@ -37,7 +28,7 @@ namespace TP_Final_UI
                 if (ejemplarDTO.Disponible)
                 {
                     listaEjemplares.Rows.Add(ejemplarDTO.ID);
-                }             
+                }
             }
         }
 
@@ -56,7 +47,7 @@ namespace TP_Final_UI
         private void PantallaListaEjemplares_VisibleChanged(object sender, EventArgs e)
         {
             if (usuarioDTO != null)
-            {             
+            {
                 try
                 {
                     DataGridViewRow fila = listaEjemplares.SelectedRows[0];
@@ -70,7 +61,7 @@ namespace TP_Final_UI
                 catch (EjemplarNoDisponibleException exc)
                 {
                     MessageBox.Show(exc.Message);
-                }              
+                }
             }
         }
 

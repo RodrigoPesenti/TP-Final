@@ -8,7 +8,6 @@ using TP_Final.DAL.EntityFramework;
 using TP_Final.Domain;
 using TP_Final.Excepciones;
 using TP_Final.IO;
-using TP_Final.IO.RequestDTO;
 
 namespace TP_Final
 {
@@ -73,7 +72,7 @@ namespace TP_Final
                             Libro = prestamo.Ejemplar.Libro.Titulo,
                             Usuario = prestamo.Usuario.Nombre,
                             FechaPrestamo = prestamo.FechaPrestamo,
-                            FechaDevolucion = prestamo.FechaDevolucion                           
+                            FechaDevolucion = prestamo.FechaDevolucion
                         };
                         listaPrestamosDTO.Add(prestamoDTO);
                     }
@@ -109,7 +108,7 @@ namespace TP_Final
 
                 log.Info("Se obtuvo un DTO del libro de ID: " + libro.ID);
                 return libroDTO;
-                
+
             }
         }
 

@@ -1,6 +1,6 @@
-﻿using TP_Final.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TP_Final.Domain;
 
 namespace TP_Final.DAL.EntityFramework.Mapping
 {
@@ -11,7 +11,7 @@ namespace TP_Final.DAL.EntityFramework.Mapping
             builder.HasKey(pEjemplar => pEjemplar.ID);
 
             builder.Property(pEjemplar => pEjemplar.ID).ValueGeneratedOnAdd();
-               
+
             builder.HasOne(pEjemplar => pEjemplar.Libro);
 
             builder.HasMany(pEjemplar => pEjemplar.Prestamos);

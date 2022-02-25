@@ -1,5 +1,4 @@
-﻿
-using EJ_2.DAL.EntityFramework;
+﻿using EJ_2.DAL.EntityFramework;
 using TP_Final.Domain;
 
 namespace TP_Final.DAL.EntityFramework

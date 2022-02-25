@@ -17,7 +17,7 @@ namespace TP_Final.DAL
         /// </summary>
         /// <param name="pEntity"></param>
         public void Remove(TEntity pEntity);
-        
+
         /// <summary>
         /// Devuelve la entidad para el ID asociado
         /// </summary>

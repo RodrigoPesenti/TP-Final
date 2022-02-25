@@ -1,15 +1,7 @@
 ﻿using log4net;
 using Microsoft.VisualBasic;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Final;
 using TP_Final.Excepciones;
@@ -37,7 +29,7 @@ namespace TP_Final_UI
             List<PrestamoDTO> listaPrestamoNoDevueltosDTO = fachada.ObtenerPrestamosNoDevueltos();
             foreach (var prestamoDTO in listaPrestamoNoDevueltosDTO)
             {
-                listaPrestamos.Rows.Add(prestamoDTO.ID , prestamoDTO.IDEjemplar, prestamoDTO.Libro, prestamoDTO.Usuario, prestamoDTO.FechaPrestamo, prestamoDTO.FechaDevolucion);
+                listaPrestamos.Rows.Add(prestamoDTO.ID, prestamoDTO.IDEjemplar, prestamoDTO.Libro, prestamoDTO.Usuario, prestamoDTO.FechaPrestamo, prestamoDTO.FechaDevolucion);
             }
         }
 
@@ -118,7 +110,7 @@ namespace TP_Final_UI
         {
             DataGridViewRow fila = listaPrestamos.SelectedRows[0];
             Int64 prestamoID = Int64.Parse(fila.Cells[0].Value.ToString());
-            var input = Interaction.InputBox("Cuantos dias se quiere extender el prestamo?", "Extender prestamo", "");           
+            var input = Interaction.InputBox("Cuantos dias se quiere extender el prestamo?", "Extender prestamo", "");
             try
             {
                 if (input != "")
@@ -135,7 +127,7 @@ namespace TP_Final_UI
                         listaPrestamos.Rows.Add(prestamoDTO.ID, prestamoDTO.IDEjemplar, prestamoDTO.Libro, prestamoDTO.Usuario, prestamoDTO.FechaPrestamo, prestamoDTO.FechaDevolucion);
                     }
                 }
-                
+
             }
             catch (FormatException exc)
             {
@@ -143,16 +135,16 @@ namespace TP_Final_UI
                 log.Error(exc);
             }
             catch (PuntosInsuficientesException exc)
-            {               
+            {
                 MessageBox.Show(exc.Message);
                 log.Error(exc);
             }
             catch (SuperasteLaExtensionAdmitidaException exc)
-            {               
+            {
                 MessageBox.Show(exc.Message);
                 log.Error(exc);
             }
-            
+
         }
 
         private void listaPrestamos_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -161,6 +153,6 @@ namespace TP_Final_UI
             botonExtenderPrestamo.Enabled = true;
         }
 
-  
+
     }
 }

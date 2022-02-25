@@ -10,7 +10,7 @@ namespace TP_Final.DAL.EntityFramework
     {
         private readonly DbContext iDbContext;
 
-        public LibroRepository(AccountManagerDbContext pContext): base(pContext)
+        public LibroRepository(AccountManagerDbContext pContext) : base(pContext)
         {
             iDbContext = pContext;
         }
