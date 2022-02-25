@@ -36,7 +36,11 @@ namespace TP_Final_UI
                             this.Visible = false;
                             pantallaAdministrador.Show();
                         }
-
+                        else
+                        {
+                            MessageBox.Show("El usuario ingresado no es administrador");
+                            log.Error("El usuario " + textBoxUsuario.Text + " no es administrador");
+                        }
                     }
                 }
             }

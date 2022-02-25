@@ -17,7 +17,6 @@ namespace TP_Final.Jobs
             using (IUnitOfWork bUoW = new UnitOfWork(new AccountManagerDbContext()))
             {
                 List<Prestamo> listaPrestamos = bUoW.PrestamoRepository.prestamosADevolverEn(2);
-                iEstrategiaNotificacion estrategiaMail = new EstrategiaEmail();
                 foreach (var prestamo in listaPrestamos)
                 {
                     Usuario usuario = prestamo.Usuario;

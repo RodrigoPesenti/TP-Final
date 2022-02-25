@@ -13,7 +13,7 @@ namespace TP_Final_UI
 
     static class Program
     {
-        //El log se guarda en C:\Logs\MyLogFile.txt
+        //El log se guarda en .\Log.txt
         private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         /// <summary>
         ///  Entrada principal de la aplicacion
@@ -48,7 +48,7 @@ namespace TP_Final_UI
                 .WithIdentity("NotificacionJob", "group1")
                 .Build();
 
-            // Trigger the job to run now, and then every 40 seconds
+            // Trigger the job to run now, and then every 24 hours
             ITrigger CadaDiaTrigger1 = TriggerBuilder.Create()
                 .WithIdentity("Cada24HorasreportePorVencerTrigger", "group1")
                 .StartNow()
@@ -66,7 +66,7 @@ namespace TP_Final_UI
             .Build();
 
             await scheduler.ScheduleJob(reportePorVencerJob, CadaDiaTrigger1);
-            await scheduler.ScheduleJob(notificacionJob, CadaDiaTrigger2);
+            //await scheduler.ScheduleJob(notificacionJob, CadaDiaTrigger2);
         }
     }
 }
