@@ -247,19 +247,7 @@ namespace TP_Final
                     bUoW.EjemplarRepository.Add(ejem);
                     libro.Ejemplares.Add(ejem);
                 }
-                log.Info("Se dieron de alta " + pCantAgregar + " ejemplares");
-                bUoW.Complete();
-            }
-        }
-
-        public void ActualizarLibro(Int64 pISBN, LibroDTO pDTO)
-        {
-            using (IUnitOfWork bUoW = new UnitOfWork(new AccountManagerDbContext()))
-            {
-                Libro libro = bUoW.LibroRepository.Get(pISBN);
-                libro.Titulo = pDTO.Titulo;
-                libro.Autor = pDTO.Autor;
-                log.Info("Se actualizo un libro");
+                log.Info("Se dieron de alta " + pCantAgregar + " ejemplares de el libro ''" + libro.Titulo + "''");
                 bUoW.Complete();
             }
         }
