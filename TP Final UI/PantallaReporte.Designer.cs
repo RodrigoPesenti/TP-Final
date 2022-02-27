@@ -1,7 +1,7 @@
 ﻿
 namespace TP_Final_UI
 {
-    partial class PantallaListaEjemplares
+    partial class PantallaReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -29,31 +29,10 @@ namespace TP_Final_UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxFiltro = new System.Windows.Forms.TextBox();
-            this.botonFiltrar = new System.Windows.Forms.Button();
             this.listaEjemplares = new System.Windows.Forms.DataGridView();
             this.ColumnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.botonPrestar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listaEjemplares)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBoxFiltro
-            // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(73, 31);
-            this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.PlaceholderText = "Ingrese ID a filtrar";
-            this.textBoxFiltro.Size = new System.Drawing.Size(260, 23);
-            this.textBoxFiltro.TabIndex = 6;
-            // 
-            // botonFiltrar
-            // 
-            this.botonFiltrar.Location = new System.Drawing.Point(343, 31);
-            this.botonFiltrar.Name = "botonFiltrar";
-            this.botonFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.botonFiltrar.TabIndex = 5;
-            this.botonFiltrar.Text = "Buscar";
-            this.botonFiltrar.UseVisualStyleBackColor = true;
-            this.botonFiltrar.Click += new System.EventHandler(this.botonFiltrar_Click);
             // 
             // listaEjemplares
             // 
@@ -64,14 +43,14 @@ namespace TP_Final_UI
             this.listaEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnaID});
-            this.listaEjemplares.Location = new System.Drawing.Point(165, 80);
+            this.listaEjemplares.Location = new System.Drawing.Point(65, 12);
             this.listaEjemplares.MultiSelect = false;
             this.listaEjemplares.Name = "listaEjemplares";
             this.listaEjemplares.ReadOnly = true;
             this.listaEjemplares.RowTemplate.Height = 25;
             this.listaEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaEjemplares.Size = new System.Drawing.Size(145, 304);
-            this.listaEjemplares.TabIndex = 4;
+            this.listaEjemplares.Size = new System.Drawing.Size(145, 333);
+            this.listaEjemplares.TabIndex = 5;
             // 
             // ColumnaID
             // 
@@ -79,42 +58,24 @@ namespace TP_Final_UI
             this.ColumnaID.Name = "ColumnaID";
             this.ColumnaID.ReadOnly = true;
             // 
-            // botonPrestar
-            // 
-            this.botonPrestar.Location = new System.Drawing.Point(197, 390);
-            this.botonPrestar.Name = "botonPrestar";
-            this.botonPrestar.Size = new System.Drawing.Size(80, 37);
-            this.botonPrestar.TabIndex = 7;
-            this.botonPrestar.Text = "Prestar";
-            this.botonPrestar.UseVisualStyleBackColor = true;
-            this.botonPrestar.Click += new System.EventHandler(this.botonPrestar_Click);
-            // 
-            // PantallaListaEjemplares
+            // PantallaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 450);
-            this.Controls.Add(this.botonPrestar);
-            this.Controls.Add(this.textBoxFiltro);
-            this.Controls.Add(this.botonFiltrar);
+            this.ClientSize = new System.Drawing.Size(273, 357);
             this.Controls.Add(this.listaEjemplares);
-            this.Name = "PantallaListaEjemplares";
-            this.Text = "PantallaListaEjemplares";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaListaEjemplares_FormClosed);
-            this.Load += new System.EventHandler(this.PantallaListaEjemplares_Load);
-            this.VisibleChanged += new System.EventHandler(this.PantallaListaEjemplares_VisibleChanged);
+            this.Name = "PantallaReporte";
+            this.Text = "PantallaReporte";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaReporte_FormClosed);
+            this.Load += new System.EventHandler(this.PantallaReporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaEjemplares)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxFiltro;
-        private System.Windows.Forms.Button botonFiltrar;
         private System.Windows.Forms.DataGridView listaEjemplares;
-        private System.Windows.Forms.Button botonPrestar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaID;
     }
 }

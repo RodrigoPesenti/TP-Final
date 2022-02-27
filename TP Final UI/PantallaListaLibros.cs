@@ -1,16 +1,10 @@
 ﻿using log4net;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Final;
 using TP_Final.IO;
-using Microsoft.VisualBasic;
 
 namespace TP_Final_UI
 {
@@ -141,6 +135,13 @@ namespace TP_Final_UI
         {
             buttonAgregarEjemplar.Enabled = true;
             buttonMostrarEjemplares.Enabled = true;
+        }
+
+        private void botonAdevolveren7dias_Click(object sender, EventArgs e)
+        {
+            PantallaReporte pantallaReporte = new PantallaReporte(this);
+            this.Visible = false;
+            pantallaReporte.Show();
         }
     }
 }

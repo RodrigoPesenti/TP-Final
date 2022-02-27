@@ -1,11 +1,6 @@
-﻿using log4net;
-using Quartz;
+﻿using Quartz;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
 using System.Threading.Tasks;
 using TP_Final.DAL;
 using TP_Final.DAL.EntityFramework;
@@ -22,7 +17,6 @@ namespace TP_Final.Jobs
             using (IUnitOfWork bUoW = new UnitOfWork(new AccountManagerDbContext()))
             {
                 List<Prestamo> listaPrestamos = bUoW.PrestamoRepository.prestamosADevolverEn(2);
-                iEstrategiaNotificacion estrategiaMail = new EstrategiaEmail();
                 foreach (var prestamo in listaPrestamos)
                 {
                     Usuario usuario = prestamo.Usuario;

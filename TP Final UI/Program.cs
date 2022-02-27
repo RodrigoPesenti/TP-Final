@@ -2,8 +2,6 @@ using log4net;
 using Quartz;
 using Quartz.Impl;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Final.Jobs;
@@ -12,10 +10,10 @@ using TP_Final.Jobs;
 
 namespace TP_Final_UI
 {
-    
+
     static class Program
     {
-        //El log se guarda en C:\Logs\MyLogFile.txt
+        //El log se guarda en .\Log.txt
         private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         /// <summary>
         ///  Entrada principal de la aplicacion
@@ -23,6 +21,7 @@ namespace TP_Final_UI
         [STAThread]
         static void Main()
         {
+
             log.Info("----------App Iniciada----------");
             Task.Run(() => InitialzeScheduler());
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
@@ -49,7 +48,7 @@ namespace TP_Final_UI
                 .WithIdentity("NotificacionJob", "group1")
                 .Build();
 
-            // Trigger the job to run now, and then every 40 seconds
+            // Trigger the job to run now, and then every 24 hours
             ITrigger CadaDiaTrigger1 = TriggerBuilder.Create()
                 .WithIdentity("Cada24HorasreportePorVencerTrigger", "group1")
                 .StartNow()
@@ -66,7 +65,7 @@ namespace TP_Final_UI
                     .RepeatForever())
             .Build();
 
-            //await scheduler.ScheduleJob(reportePorVencerJob, CadaDiaTrigger1);
+            await scheduler.ScheduleJob(reportePorVencerJob, CadaDiaTrigger1);
             //await scheduler.ScheduleJob(notificacionJob, CadaDiaTrigger2);
         }
     }

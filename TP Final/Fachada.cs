@@ -8,7 +8,6 @@ using TP_Final.DAL.EntityFramework;
 using TP_Final.Domain;
 using TP_Final.Excepciones;
 using TP_Final.IO;
-using TP_Final.IO.RequestDTO;
 
 namespace TP_Final
 {
@@ -73,7 +72,7 @@ namespace TP_Final
                             Libro = prestamo.Ejemplar.Libro.Titulo,
                             Usuario = prestamo.Usuario.Nombre,
                             FechaPrestamo = prestamo.FechaPrestamo,
-                            FechaDevolucion = prestamo.FechaDevolucion                           
+                            FechaDevolucion = prestamo.FechaDevolucion
                         };
                         listaPrestamosDTO.Add(prestamoDTO);
                     }
@@ -109,7 +108,7 @@ namespace TP_Final
 
                 log.Info("Se obtuvo un DTO del libro de ID: " + libro.ID);
                 return libroDTO;
-                
+
             }
         }
 
@@ -248,19 +247,7 @@ namespace TP_Final
                     bUoW.EjemplarRepository.Add(ejem);
                     libro.Ejemplares.Add(ejem);
                 }
-                log.Info("Se dieron de alta " + pCantAgregar + " ejemplares");
-                bUoW.Complete();
-            }
-        }
-
-        public void ActualizarLibro(Int64 pISBN, LibroDTO pDTO)
-        {
-            using (IUnitOfWork bUoW = new UnitOfWork(new AccountManagerDbContext()))
-            {
-                Libro libro = bUoW.LibroRepository.Get(pISBN);
-                libro.Titulo = pDTO.Titulo;
-                libro.Autor = pDTO.Autor;
-                log.Info("Se actualizo un libro");
+                log.Info("Se dieron de alta " + pCantAgregar + " ejemplares de el libro ''" + libro.Titulo + "''");
                 bUoW.Complete();
             }
         }

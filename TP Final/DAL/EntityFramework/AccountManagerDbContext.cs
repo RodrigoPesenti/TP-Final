@@ -1,6 +1,6 @@
-﻿using TP_Final.DAL.EntityFramework.Mapping;
+﻿using Microsoft.EntityFrameworkCore;
+using TP_Final.DAL.EntityFramework.Mapping;
 using TP_Final.Domain;
-using Microsoft.EntityFrameworkCore;
 
 namespace TP_Final.DAL.EntityFramework
 {
@@ -14,7 +14,7 @@ namespace TP_Final.DAL.EntityFramework
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {          
+        {
             modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
             modelBuilder.ApplyConfiguration(new EjemplarConfiguration());
             modelBuilder.ApplyConfiguration(new LibroConfiguration());

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TP_Final_UI
@@ -51,7 +44,7 @@ namespace TP_Final_UI
             DialogResult confirmacion = MessageBox.Show("Seguro que quieres cerrar sesion?", "Confirmar", MessageBoxButtons.YesNo);
             if (confirmacion == DialogResult.Yes)
             {
-                this.Close();           
+                this.Close();
             }
         }
 

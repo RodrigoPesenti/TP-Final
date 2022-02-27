@@ -33,7 +33,7 @@ namespace TP_Final.DAL.EntityFramework
             this.NotificacionRepository = new NotificacionRepository(pContext);
         }
 
-        
+
 
         public void Complete()
         {
@@ -45,7 +45,7 @@ namespace TP_Final.DAL.EntityFramework
             {
                 throw new EFDatabaseUpdateException(exc.InnerException.Message);
             }
-            
+
         }
 
         protected virtual void Dispose(bool pDisposing)

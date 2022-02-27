@@ -30,8 +30,6 @@ namespace TP_Final_UI
         private void InitializeComponent()
         {
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxContraseña = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,7 +38,7 @@ namespace TP_Final_UI
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(125, 266);
+            this.BotonAceptar.Location = new System.Drawing.Point(124, 266);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(75, 23);
             this.BotonAceptar.TabIndex = 0;
@@ -48,37 +46,21 @@ namespace TP_Final_UI
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 190);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 232);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Contraseña:";
-            // 
             // textBoxUsuario
             // 
-            this.textBoxUsuario.Location = new System.Drawing.Point(117, 187);
+            this.textBoxUsuario.Location = new System.Drawing.Point(90, 187);
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(148, 23);
+            this.textBoxUsuario.PlaceholderText = "Usuario";
+            this.textBoxUsuario.Size = new System.Drawing.Size(151, 23);
             this.textBoxUsuario.TabIndex = 3;
             // 
             // textBoxContraseña
             // 
-            this.textBoxContraseña.Location = new System.Drawing.Point(117, 229);
+            this.textBoxContraseña.Location = new System.Drawing.Point(90, 229);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.PasswordChar = '*';
-            this.textBoxContraseña.Size = new System.Drawing.Size(148, 23);
+            this.textBoxContraseña.PlaceholderText = "Contraseña";
+            this.textBoxContraseña.Size = new System.Drawing.Size(151, 23);
             this.textBoxContraseña.TabIndex = 4;
             // 
             // pictureBox1
@@ -99,11 +81,9 @@ namespace TP_Final_UI
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxContraseña);
             this.Controls.Add(this.textBoxUsuario);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BotonAceptar);
             this.Name = "PantallaLogin";
-            this.Text = "Form1";
+            this.Text = "Prestam O.S";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,8 +93,6 @@ namespace TP_Final_UI
         #endregion
 
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.PictureBox pictureBox1;

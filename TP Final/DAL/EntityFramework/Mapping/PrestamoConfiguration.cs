@@ -1,6 +1,6 @@
-﻿using TP_Final.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TP_Final.Domain;
 
 namespace TP_Final.DAL.EntityFramework.Mapping
 {
