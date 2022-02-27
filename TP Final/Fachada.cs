@@ -210,7 +210,7 @@ namespace TP_Final
                 log.Info("Se creo un usuario");
             }
         }
-        //Poner nombre representativo a IApi
+
         public List<LibroDTO> BuscarLibroEnAPI(string pTituloLibro)
         {
             IApiConsultasBiblioteca apiConsultas = new OpenLibrary();
