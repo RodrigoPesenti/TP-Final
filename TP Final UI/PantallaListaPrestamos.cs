@@ -98,6 +98,9 @@ namespace TP_Final_UI
             MessageBox.Show("Se realizo la devolucion con exito");
             log.Info("Se devolvio el prestamo de ID: " + prestamoID);
 
+            botonDevolver.Enabled = false;
+            botonExtenderPrestamo.Enabled = false;
+
             listaPrestamos.Rows.Clear();
             List<PrestamoDTO> listaPrstamosDTO = fachada.ObtenerPrestamosNoDevueltos();
             foreach (var prestamoDTO in listaPrstamosDTO)
