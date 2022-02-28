@@ -25,7 +25,7 @@ namespace TP_Final_UI
 
             foreach (var ejemplarDTO in Reporte)
             {
-                listaEjemplares.Rows.Add(ejemplarDTO.ID);
+                listaEjemplares.Rows.Add(ejemplarDTO.ID, ejemplarDTO.ISBN);
             }
         }
 

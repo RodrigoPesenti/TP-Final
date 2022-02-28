@@ -31,6 +31,7 @@ namespace TP_Final_UI
         {
             this.listaEjemplares = new System.Windows.Forms.DataGridView();
             this.ColumnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.listaEjemplares)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,14 +43,15 @@ namespace TP_Final_UI
             this.listaEjemplares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnaID});
-            this.listaEjemplares.Location = new System.Drawing.Point(65, 12);
+            this.ColumnaID,
+            this.ColumnISBN});
+            this.listaEjemplares.Location = new System.Drawing.Point(12, 12);
             this.listaEjemplares.MultiSelect = false;
             this.listaEjemplares.Name = "listaEjemplares";
             this.listaEjemplares.ReadOnly = true;
             this.listaEjemplares.RowTemplate.Height = 25;
             this.listaEjemplares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaEjemplares.Size = new System.Drawing.Size(145, 333);
+            this.listaEjemplares.Size = new System.Drawing.Size(249, 333);
             this.listaEjemplares.TabIndex = 5;
             // 
             // ColumnaID
@@ -57,6 +59,12 @@ namespace TP_Final_UI
             this.ColumnaID.HeaderText = "ID Ejemplar";
             this.ColumnaID.Name = "ColumnaID";
             this.ColumnaID.ReadOnly = true;
+            // 
+            // ColumnISBN
+            // 
+            this.ColumnISBN.HeaderText = "ISBN";
+            this.ColumnISBN.Name = "ColumnISBN";
+            this.ColumnISBN.ReadOnly = true;
             // 
             // PantallaReporte
             // 
@@ -77,5 +85,6 @@ namespace TP_Final_UI
 
         private System.Windows.Forms.DataGridView listaEjemplares;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnISBN;
     }
 }
