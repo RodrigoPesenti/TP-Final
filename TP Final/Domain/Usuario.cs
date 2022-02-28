@@ -23,16 +23,5 @@ namespace TP_Final.Domain
         public TipoNotificacion TipoNotificacion { get; set; }
 
         public Int64 ID { get; set; }
-
-
-        public void RealizarPrestamo()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ExtenderPrestamo()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

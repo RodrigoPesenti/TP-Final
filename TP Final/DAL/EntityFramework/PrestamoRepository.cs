@@ -15,7 +15,7 @@ namespace TP_Final.DAL.EntityFramework
         public List<Prestamo> prestamosADevolverEn(int pDias)
         {
             List<Prestamo> listaDevolver = new List<Prestamo>();
-            IEnumerable<Prestamo> listaPrestamos = this.GetAll();
+            IEnumerable<Prestamo> listaPrestamos = this.GetAll();  //Obitene la lista de todos los prestamos en la base de datos
             foreach (var prestamo in listaPrestamos)
             {
                 double resta = (prestamo.FechaDevolucion - DateTime.Today).TotalDays;

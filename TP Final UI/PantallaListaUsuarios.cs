@@ -107,6 +107,19 @@ namespace TP_Final_UI
 
         private void listaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //DataGridViewRow fila = listaUsuarios.SelectedRows[0];
+            //UsuarioDTO usuarioDTO = new UsuarioDTO
+            //{
+            //    Nombre = fila.Cells[0].Value.ToString(),
+            //    Puntos = (int)fila.Cells[1].Value,
+            //    TipoUsuario = (TipoUsuario)fila.Cells[2].Value,
+            //    Mail = fila.Cells[3].Value.ToString()
+            //};
+            //usuarioSeleccionado = usuarioDTO;
+        }
+
+        private void botonAceptar_Click(object sender, EventArgs e)
+        {
             DataGridViewRow fila = listaUsuarios.SelectedRows[0];
             UsuarioDTO usuarioDTO = new UsuarioDTO
             {
@@ -116,10 +129,7 @@ namespace TP_Final_UI
                 Mail = fila.Cells[3].Value.ToString()
             };
             usuarioSeleccionado = usuarioDTO;
-        }
 
-        private void botonAceptar_Click(object sender, EventArgs e)
-        {
             PantallaListaEjemplares pantallaListaEjemplares = (PantallaListaEjemplares)pantallaAnterior;
             pantallaListaEjemplares.usuarioDTO = usuarioSeleccionado;
             this.Close();
